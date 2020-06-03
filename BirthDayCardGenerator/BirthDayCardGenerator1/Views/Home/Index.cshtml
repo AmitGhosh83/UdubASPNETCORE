@@ -9,42 +9,54 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <link href="~/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="~/css/StyleSheet.scss" />
+    <link href="~/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
     <title>Birthday Card Generator</title>
 </head>
 <body>
-    <h4>Birthday Card Generator</h4>
-    <hr />
-    <div class="row">
-        <div class="col-md-4">
-            <h4>Send a  Birthday Card</h4>
-            <form asp-action="Index">
-                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                <div class="form-group">
-                    <label asp-for="Sender" class="control-label">From:</label>
-                    <input asp-for="Sender" class="form-control" />
-                    <span asp-validation-for="Sender" class="text-danger"></span>
-                </div>
 
-                <div class="form-group">
-                    <label asp-for="Recipient" class="control-label">To:</label>
-                    <input asp-for="Recipient" class="form-control" />
-                    <span asp-validation-for="Recipient" class="text-danger"></span>
-                </div>
+    <nav class="navbar navbar-dark   bg-dark">
+        <a class="navbar-brand" >Birthday Card Generator</a>
+    </nav>
+        <hr />
+        <div class="row">
+            <div class="col-sm-10">
+                <h4>Send a  Birthday Card</h4>
+                <form class="form-horizontal" asp-action="Index">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
-                <div class="form-group">
-                    <label asp-for="Message" class="control-label">Message:</label>
-                    <input asp-for="Message" class="form-control" />
-                    <span asp-validation-for="Message" class="text-danger"></span>
-                </div>
+                    <div class="form-group">
+                        <label asp-for="Sender" class="control-label col-sm-1 badge-primary">From:</label>
+                        <div class="col-sm-8">
+                            <input asp-for="Sender" placeholder="Sender Information" class="form-control" />
+                            <span asp-validation-for="Sender" class="text-danger"></span>
+                        </div>
+                    </div>
 
-                <div class="form-group">
-                    <input type="submit" value="SendCard" class="btn btn-success" />
-                </div>
-            </form>
+                    <div class="form-group">
+                        <label asp-for="Recipient" class="control-label col-sm-1 badge-primary">To:</label>
+                        <div class="col-sm-8">
+                            <input asp-for="Recipient" placeholder="Recipeint Information" class="form-control" />
+                            <span asp-validation-for="Recipient" class="text-danger"></span>
+                        </div>
 
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Message" class="control-label col-sm-1 badge-primary">Message:</label>
+                        <div class="col-sm-8">
+                            <input asp-for="Message" placeholder="Message" class="form-control" />
+                            <span asp-validation-for="Message" class="text-danger"></span>
+                        </div>
+
+                    </div>
+
+                    <div class="form-group">
+                        <input type="submit" value="Send Card" class="btn btn-success" />
+                    </div>
+                </form>
+
+            </div>
         </div>
-    </div>
 </body>
 </html>

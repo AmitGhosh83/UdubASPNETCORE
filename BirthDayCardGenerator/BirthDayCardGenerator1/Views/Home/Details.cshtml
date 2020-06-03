@@ -1,6 +1,7 @@
 ﻿@model  BirthDayCardGenerator1.Models.ResponseForm
 @{
     Layout = null;
+    ViewData["Title"] = "Details";
 }
 
 <!DOCTYPE html>
@@ -18,6 +19,7 @@
     <div class="row">
         <div class="col-md-4">
             <h4>Birthday Card Sent</h4>
+            <form action="Index" method="post">
                 <div class="form-group">
                     <label asp-for="Sender" class="control-label">From:@Model.Sender</label>
 
@@ -30,6 +32,7 @@
                 <div class="form-group">
                     <label asp-for="Message" class="control-label">Message:@Model.Message</label>
                 </div>
+            </form>
         </div>
     </div>
 </body>

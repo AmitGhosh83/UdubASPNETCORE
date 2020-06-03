@@ -1,0 +1,36 @@
+﻿@model BirthDayCardGenerator.Models.ResponseForm
+@{
+    ViewData["Title"] = "Details";
+}
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Birthday Card Sent</title>
+    <link rel="stylesheet" type="text/css" href="~/css/StyleSheet.scss" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <h4>Birthday Card Generator</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <h4>Birthday Card Sent</h4>
+            <form action="Index" method="post">
+                <div class="form-group">
+                    <label asp-for="Sender" class="control-label">From:@Model.Sender</label>
+                  
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Recipient" class="control-label">To:@Model.Recipient</label>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Message" class="control-label">Message:@Model.Message</label>
+                </div>
+           </form>
+        </div>
+    </div>
+</body>
+</html>
+
